@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atividade 04</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
+    <href src="./Js/script.js"></href>
 </head>
 <body>
     <header class="container-fluid p-2 bg-warning text-center" id="home">
@@ -90,23 +90,25 @@
 
       <div class="col-md-6">
         <div class="card mb-3 mx-auto mt-5" style="max-width: 50%;">
-            <div class="card-body text-center">
-                <h5 class="card-title">Faça já a Sua Reserva</h5>
+            <div class="card-body text-center border-black">
+                <h5 class="card-title text-danger">Faça já a Sua Reserva</h5>
                 <p class="card-text">Sinta o Conforto acolhedor de Nossas Hospedagens, quartos a partir de R$ 99,00 a Diaria.</p>
                
-                <a href="#" class="btn btn-primary">Saiba Mais!</a>
+                <a href="#" class="btn btn-success">Saiba Mais!</a>
             </div>
         </div>
     </div>
   
   </section>
 
+  
+
   <section class="container-fluid bg-warning-subtle text-center p-3" id="legenda">
 
     <h2> Por que se Hospedar em nossos Hoteis !</h2>
       
       <br>
-  <p><b>
+  <p>
 
     Experimente uma estadia memorável em nossas acomodações cuidadosamente projetadas para proporcionar o máximo de conforto e
     relaxamento. Com uma decoração moderna e elegante, cada quarto é um oásis de tranquilidade, perfeito para recarregar as energias 
@@ -114,7 +116,7 @@
     Seja para uma viagem de negócios ou lazer, nossos quartos são o refúgio ideal para sua próxima estadia. Venha fazer parte dessa 
     experiência única e reserve agora o seu quarto conosco!
 
-  </b></p>
+  </p>
 
   </section>
 
@@ -122,29 +124,29 @@
 
     <div class="col-md-6 text-center">
      
-      <h3>  <i class="bi bi-cup-hot"></i> Delicioso café da manha !</h3>
-      <p>Incluso em todas as Diárias.</p>
+      <h3 >  <i class="bi bi-cup-hot"></i> Delicioso café da manha !</h3>
+      <p class="text-danger">Incluso em todas as Diárias.</p>
     </div>
 
     <div class="col-md-6 text-center">
-      <h3> <i class="bi bi-geo-alt"></i> Facil Acesso !</h3>
-      <p>Proximo a todos os pontos Turisticos.</p>
+      <h3> <i class="bi bi-geo-alt text-danger"></i> Facil Acesso !</h3>
+      <p class="text-danger">Proximo a todos os pontos Turisticos.</p>
     </div>
 
 
   </section>
 
-  <section class="container-fluid row m-3 text-center justify-content-center" id="quartos">
+  <section class="container-fluid row m-3 text-center justify-content-center bg-warning-subtle" id="quartos">
 
     <h2 class="text-center" > Nossos Quartos !</h2>
       
     <br>
-<p class="text-center"><b>
+<p class="text-center">
 
   Experimente uma estadia memorável em nossas acomodações cuidadosamente projetadas para proporcionar o máximo de conforto e
   relaxamento. 
 
-</b></p>
+</p>
 
     <div class="card-group">
       <div class="card">
@@ -174,67 +176,68 @@
     </div>
   </section>
 
-  <section class="container-fluid row m-3 justify-content-center bg-warning-subtle p-3" id="formulario">
+  <section class="container-fluid row m-3 justify-content-center bg-warning p-3" id="formulario">
     <div class="col-md-3  mt-5 text-center">
-      <h3> Faça sua Reserva!</h3>
+      <h3 class=" text-danger"> Faça sua Reserva!</h3>
       <br>
-      <p><b>Entre em contato conosco indicando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da Reserva.</b></p>
+      <p ><b>Entre em contato conosco indicando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da Reserva.</b></p>
     </div>
   
     <div class="col-md-4">
       <section class="container-fluid bg-light p-2">
         <h2 class="text-center">Reservas</h2>
         <hr>
-        <form method="GET" action="">
+        <form id="formularioReserva">
           <fieldset>
             <legend class="text-center">Dados Pessoais</legend>
+            <p class="text-center"><small class="text-danger">Preenchimento Obrigatorio * </small></p>
             <div class="mb-3">
-              <label class="form-label" for="nome">Nome</label>
-              <input class="form-control" type="text" name="nome" id="nome">
+              <label class="form-label" for="nome">Nome<span class="text-danger">*</span></label>
+              <input class="form-control" type="text" name="nome" id="nome" required>
             </div>
             <div class="mb-3">
-              <label class="form-label" for="email">Email</label>
-              <input type="email" class="form-control" name="email" id="email">
+              <label class="form-label" for="email">Email<span class="text-danger">*</span></label>
+              <input type="email" class="form-control" name="email" id="email" required>
             </div>
             <div class="mb-3">
-              <label class="form-label" for="date">Data de Entrada</label>
-              <input type="date" class="form-control" name="dataEntrada" id="date">
+              <label class="form-label" for="date">Data de Entrada<span class="text-danger">*</span></label>
+              <input type="date" class="form-control" name="dataEntrada" id="date" required>
             </div>
             <div class="mb-3">
-              <label class="form-label" for="dataSaida">Data de Saída</label>
-              <input type="date" class="form-control" name="dataSaida" id="dataSaida">
+              <label class="form-label" for="dataSaida">Data de Saída<span class="text-danger">*</span></label>
+              <input type="date" class="form-control" name="dataSaida" id="dataSaida" required>
             </div>
           </fieldset>
-        </form>
-      </section>
-    </div>
-  
-    <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
       <section class="container-fluid bg-light p-2">
         <fieldset>
           <h2 class="text-center">Detalhes da Reserva</h2>
           <hr>
           <div class="mb-3">
-            <label class="form-label" for="qtdAdultos">Quant. de Adultos</label>
-            <input type="number" class="form-control" name="qtdAdultos" id="qtdAdultos">
+            <label class="form-label" for="qtdAdultos">Quant. de Adultos<span class="text-danger">*</span></label>
+            <input type="number" class="form-control" name="qtdAdultos" id="qtdAdultos" required min="1">
           </div>
           <div class="mb-3">
-            <label class="form-label" for="qtdCriancas">Quant. de Crianças</label>
-            <input type="number" class="form-control" name="qtdCriancas" id="qtdCriancas">
+            <label class="form-label" for="qtdCriancas">Quant. de Crianças<span class="text-danger">*</span></label>
+            <input type="number" class="form-control" name="qtdCriancas" id="qtdCriancas" min="0">
           </div>
           <div class="mb-3">
             <label class="form-label" for="observacoes">Observações</label>
-            <textarea class="form-control" name="observacoes" id="observacoes" rows="5"></textarea>
+            <textarea class="form-control" name="observacoes" id="observacoes" rows="7"></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-success">Enviar</button>
-        </div>
+            <button type="button" id="enviarReserva" class="btn btn-success">Enviar</button>
+          </div>
         </fieldset>
       </section>
     </div>
+    </form>
   </section>
-  
-  
+
+  <div class="container-fluid row m-3 justify-content-center" id="dadosReserva"></div>
+
+
   <section class="container-fluid">
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -246,18 +249,78 @@
       </div>
   
       <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><i class="bi bi-youtube "></i><a class="text-black" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><i class="bi bi-youtube text-danger "></i><a class="text-black" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
         <li class="ms-3"><i class="bi bi-instagram "></i><a class="text-black" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><i class="bi bi-facebook"></i><a class="text-black" href="#"><svg class="bi" width="50" height="24"></svg></a></li>
+        <li class="ms-3"><i class="bi bi-facebook text-bg-primary"></i><a class="text-black" href="#"><svg class="bi" width="50" height="24"></svg></a></li>
       </ul>
     </footer>
   </div>
+
+  <script>
+        document.getElementById('enviarReserva').addEventListener('click', function(event) {
+        event.preventDefault(); 
+        
+        var formData = new FormData(document.getElementById('formularioReserva'));
+        var dadosReserva = {};
+        
+          formData.forEach(function(value, key){
+            dadosReserva[key] = value;
+        });
+
+        localStorage.setItem('reservaAtual', JSON.stringify(dadosReserva));
+        window.location.href = 'reservas.html';
+    });
+</script>
+
   
 </section>
-    
-   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   
+<script>
 
-  </body>
+document.getElementById('enviarReserva').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    
+    var formData = new FormData(document.getElementById('formularioReserva'));
+    var dadosReserva = {};
+    
+    formData.forEach(function(value, key){
+        dadosReserva[key] = value;
+    });
+
+    var modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = '';
+    for (var key in dadosReserva) {
+        modalBody.innerHTML += '<p><strong>' + key + ':</strong> ' + dadosReserva[key] + '</p>';
+    }
+
+    var myModal = new bootstrap.Modal(document.getElementById('reservaModal'));
+    myModal.show();
+
+    document.getElementById('formularioReserva').reset();
+
+    document.getElementById('confirmacao').innerHTML = '<div class="alert alert-danger" role="alert">Cadastro confirmado!</div>';
+});
+
+</script>
+
+</body>
+
+<!-- Modal -->
+<div class="modal fade" id="reservaModal" tabindex="-1" aria-labelledby="reservaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reservaModalLabel">Detalhes da Reserva</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <!-- Aqui serão exibidos os detalhes da reserva -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cadastro Finalizado</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="confirmacao"></div>
 </html>
